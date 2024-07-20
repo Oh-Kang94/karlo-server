@@ -1,0 +1,810 @@
+INFO:     Will watch for changes in these directories: ['/home/ubuntu/karlo-server']
+INFO:     Uvicorn running on http://0.0.0.0:9000 (Press CTRL+C to quit)
+INFO:     Started reloader process [3439] using StatReload
+INFO:     Started server process [3441]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     205.210.31.222:58850 - "GET / HTTP/1.1" 404 Not Found
+INFO:     35.178.207.7:57998 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     35.178.207.7:41490 - "GET /index.html HTTP/1.1" 404 Not Found
+INFO:     35.178.207.7:58480 - "GET /%2BCSCOE%2B/logon.html HTTP/1.1" 404 Not Found
+INFO:     35.178.207.7:42246 - "GET /cgi-bin/login.cgi HTTP/1.1" 404 Not Found
+INFO:     35.178.207.7:59584 - "GET /logon.htm HTTP/1.1" 404 Not Found
+INFO:     35.178.207.7:35634 - "GET / HTTP/1.1" 404 Not Found
+INFO:     172.104.210.105:40339 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.79.181.179:24382 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.199.110.73:60668 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.135:59064 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.224:58992 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.165.200:54018 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.165.200:54802 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     107.151.182.62:51058 - "GET / HTTP/1.1" 404 Not Found
+INFO:     107.151.182.62:51402 - "GET /api/session/properties HTTP/1.1" 404 Not Found
+INFO:     107.151.182.62:35166 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     205.210.31.6:61812 - "GET / HTTP/1.1" 404 Not Found
+INFO:     34.77.127.183:58150 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.109:57852 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.207.44:54114 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.195.116:59564 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.208:64220 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.152:61408 - "GET / HTTP/1.1" 404 Not Found
+INFO:     43.153.97.102:23806 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.250:63490 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.29:59624 - "GET / HTTP/1.1" 404 Not Found
+INFO:     172.226.94.41:12955 - "GET / HTTP/1.1" 404 Not Found
+INFO:     172.226.94.41:12955 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.226.95.40:12287 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 Not Found
+INFO:     172.226.95.40:12287 - "GET /apple-touch-icon.png HTTP/1.1" 404 Not Found
+INFO:     172.226.94.41:15986 - "GET /docs HTTP/1.1" 200 OK
+INFO:     172.226.94.41:15986 - "GET /openapi.json HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'app/router/router.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3441]
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/_subprocess.py", line 78, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/server.py", line 69, in serve
+    await self._serve(sockets)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/server.py", line 76, in _serve
+    config.load()
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/config.py", line 433, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    raise exc from None
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/karlo-server/app/main.py", line 4, in <module>
+    from app.router import router
+  File "/home/ubuntu/karlo-server/app/router/router.py", line 3, in <module>
+    from app.controller import (images_ctrl, updater_ctrl)
+  File "/home/ubuntu/karlo-server/app/controller/updater_ctrl.py", line 2, in <module>
+    from aiofiles import open as auifiles_open
+ModuleNotFoundError: No module named 'aiofiles'
+WARNING:  StatReload detected changes in 'app/controller/updater_ctrl.py'. Reloading...
+INFO:     Started server process [26477]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     172.226.94.41:13189 - "GET /docs HTTP/1.1" 200 OK
+INFO:     172.226.94.41:13189 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     172.226.94.41:13189 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     172.226.94.41:14921 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:53986 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54031 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54060 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54226 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54288 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54296 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54406 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54417 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54423 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54438 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54442 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54454 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54534 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54546 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54548 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54555 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54815 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54848 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:54959 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:55030 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     221.150.7.18:55062 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54242 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54246 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54252 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54256 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54260 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54262 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54280 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54282 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54286 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54290 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54294 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54298 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54304 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54308 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54312 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54316 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54326 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54330 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54334 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54342 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54368 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54372 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54410 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54416 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54418 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54430 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54446 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54450 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54452 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54456 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     172.226.94.43:26089 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     172.226.94.43:25137 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54462 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54466 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54470 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54474 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54478 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54482 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54484 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54488 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54492 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54498 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54502 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54506 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54508 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54536 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54546 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54550 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54554 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54558 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     112.171.76.29:54562 - "GET /api/update/ HTTP/1.1" 200 OK
+INFO:     107.170.224.38:57962 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.128.232.226:34528 - "CONNECT example.com%3A443 HTTP/1.1" 404 Not Found
+INFO:     205.210.31.209:61278 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:40922 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240423030812 HTTP/1.1" 404 Not Found
+INFO:     205.210.31.139:57800 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.199.93.35:58782 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.180.140.5:60064 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     204.48.20.232:33220 - "GET /tables HTTP/1.1" 404 Not Found
+INFO:     205.210.31.30:63270 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.126:51852 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.126:43108 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.126:43820 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.237:59656 - "GET / HTTP/1.1" 404 Not Found
+INFO:     154.212.141.191:29992 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.180.143.79:51570 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.243.146.55:37700 - "GET / HTTP/1.1" 404 Not Found
+INFO:     80.66.83.47:60938 - "CONNECT hotmail-com.olc.protection.outlook.com%3A25 HTTP/1.1" 404 Not Found
+INFO:     80.66.83.47:48362 - "CONNECT 80.66.83.47%3A80 HTTP/1.1" 404 Not Found
+INFO:     205.210.31.84:61040 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:47822 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240425041652 HTTP/1.1" 404 Not Found
+INFO:     205.210.31.13:59144 - "GET / HTTP/1.1" 404 Not Found
+INFO:     152.32.132.203:58594 - "GET / HTTP/1.1" 404 Not Found
+INFO:     152.32.132.203:58684 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     152.32.132.203:58786 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     152.32.132.203:58784 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     193.118.53.50:36334 - "GET / HTTP/1.1" 404 Not Found
+INFO:     193.118.53.50:40576 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     199.45.154.70:39232 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.70:55132 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.70:55140 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     106.75.5.52:36818 - "POST /token HTTP/1.1" 404 Not Found
+INFO:     198.235.24.148:58738 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.91:64526 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.191.126.213:41290 - "GET / HTTP/1.1" 404 Not Found
+INFO:     104.131.144.29:54636 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.204.39:41732 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.109:57702 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.109:38318 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.109:38324 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     118.26.105.52:34168 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.26.105.52:53508 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     118.26.105.52:53526 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     118.26.105.52:53538 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     198.235.24.3:59588 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.12:56322 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.12:58494 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.12:49012 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.182:62198 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.191.126.213:46760 - "GET / HTTP/1.1" 404 Not Found
+INFO:     44.220.185.81:59932 - "GET / HTTP/1.1" 404 Not Found
+INFO:     47.237.12.77:59546 - "GET / HTTP/1.0" 404 Not Found
+INFO:     47.237.12.77:60334 - "GET / HTTP/1.1" 404 Not Found
+INFO:     47.237.12.77:32932 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     47.237.12.77:33164 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     47.237.12.77:33176 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     198.199.116.62:49612 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.18:60872 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.113:65070 - "GET / HTTP/1.1" 404 Not Found
+INFO:     69.55.55.63:53786 - "GET /tables HTTP/1.1" 404 Not Found
+INFO:     206.168.34.53:48676 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.53:38764 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.53:51074 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.139:65300 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.61:56814 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.61:56830 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.61:56838 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.115:37762 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.115:38912 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.115:59746 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.134:63848 - "GET / HTTP/1.1" 404 Not Found
+INFO:     173.255.221.189:42048 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.33.80.243:46362 - "GET / HTTP/1.1" 404 Not Found
+INFO:     107.170.240.30:49060 - "GET / HTTP/1.1" 404 Not Found
+INFO:     18.237.54.204:41226 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.154:63408 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.187:57814 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.187:48540 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.187:45942 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.253:62912 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.231.50:34524 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.193:59820 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.215:35488 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.215:53062 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.215:55076 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.35:60246 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.35:51460 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.35:44454 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.231:62046 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.243.142.37:45780 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.30:49184 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.30:32896 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.30:32902 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.131:57824 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.75:63026 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.92:51695 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.150:58020 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.56:55084 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.56:53514 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.56:53530 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.78:50272 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.78:56390 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.78:56406 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     103.203.57.26:49662 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240502172556 HTTP/1.1" 404 Not Found
+INFO:     198.235.24.87:62854 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.221:64328 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.243.151.37:48208 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.156.128.12:52398 - "GET /api/session/properties HTTP/1.1" 404 Not Found
+INFO:     45.156.128.12:35012 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     45.156.128.12:35466 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.232:64940 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.180.140.6:37844 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.28:62812 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.230:50028 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.230:45158 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     205.210.31.228:65518 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.232.33:57376 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.18:59966 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.77:45395 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.46:59874 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.6:51369 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.223:41158 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.223:47760 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.223:37632 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     47.237.91.143:35190 - "GET / HTTP/1.1" 404 Not Found
+INFO:     47.237.91.143:35262 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.94.138.36:50932 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.36:48760 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     192.241.225.57:33310 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.3:62272 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.233:53320 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.233:55936 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     44.220.185.152:58514 - "GET / HTTP/1.1" 404 Not Found
+INFO:     207.90.244.2:50054 - "GET / HTTP/1.1" 404 Not Found
+INFO:     207.90.244.2:50070 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     198.235.24.5:64310 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.219:57874 - "GET / HTTP/1.1" 404 Not Found
+INFO:     90.151.171.106:43708 - "CONNECT eth0.me%3A443 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     90.151.171.106:33540 - "GET http%3A//eth0.me?Z75156162500Q1 HTTP/1.1" 404 Not Found
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/routing.py", line 756, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/routing.py", line 806, in app
+    await self.default(scope, receive, send)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/routing.py", line 690, in not_found
+    raise HTTPException(status_code=404)
+starlette.exceptions.HTTPException: 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/h11/_state.py", line 249, in _fire_event_triggered_transitions
+    new_state = EVENT_TRIGGERED_TRANSITIONS[role][state][event_type]
+KeyError: <class 'h11._events.Response'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 407, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/applications.py", line 123, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/_exception_handler.py", line 78, in wrapped_app
+    await response(scope, receive, sender)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/responses.py", line 152, in __call__
+    await send(
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/_exception_handler.py", line 50, in sender
+    await send(message)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/starlette/middleware/errors.py", line 161, in _send
+    await send(message)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/uvicorn/protocols/http/h11_impl.py", line 489, in send
+    output = self.conn.send(event=response)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/h11/_connection.py", line 469, in send
+    data_list = self.send_with_data_passthrough(event)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/h11/_connection.py", line 494, in send_with_data_passthrough
+    self._process_event(self.our_role, event)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/h11/_connection.py", line 242, in _process_event
+    self._cstate.process_event(role, type(event), server_switch_event)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/h11/_state.py", line 238, in process_event
+    self._fire_event_triggered_transitions(role, event_type)
+  File "/home/ubuntu/karlo-server/env/lib/python3.10/site-packages/h11/_state.py", line 251, in _fire_event_triggered_transitions
+    raise LocalProtocolError(
+h11._util.LocalProtocolError: can't handle event type Response when role=SERVER and state=MUST_CLOSE
+INFO:     35.187.98.121:42036 - "GET / HTTP/1.1" 404 Not Found
+INFO:     107.170.231.40:44018 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.55:45954 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.55:50522 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.55:44928 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     80.75.212.75:35050 - "CONNECT www.google.com%3A443 HTTP/1.1" 404 Not Found
+INFO:     198.235.24.157:61072 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.34:62220 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.91:60766 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.163:61152 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.22:40307 - "GET / HTTP/1.1" 404 Not Found
+INFO:     107.170.248.23:47942 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.191.126.213:43982 - "GET / HTTP/1.1" 404 Not Found
+INFO:     154.212.141.154:35850 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.19:60256 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:45902 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240507194108 HTTP/1.1" 404 Not Found
+INFO:     198.235.24.182:61570 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.151:38727 - "GET / HTTP/1.1" 404 Not Found
+INFO:     134.209.216.156:58502 - "GET /tables HTTP/1.1" 404 Not Found
+INFO:     205.210.31.229:58658 - "GET / HTTP/1.1" 404 Not Found
+INFO:     172.226.94.41:19489 - "GET / HTTP/1.1" 404 Not Found
+INFO:     172.226.94.41:19489 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.226.95.47:13085 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 Not Found
+INFO:     172.226.95.47:13085 - "GET /apple-touch-icon.png HTTP/1.1" 404 Not Found
+INFO:     107.170.239.38:43050 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.118:58440 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.118:56466 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     80.75.212.75:48858 - "CONNECT www.google.com%3A443 HTTP/1.1" 404 Not Found
+INFO:     58.212.237.107:39937 - "GET / HTTP/1.1" 404 Not Found
+INFO:     1.83.125.164:14214 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.84:57540 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.52:56890 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.52:60840 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.52:55630 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.13:60556 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.37:41102 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.37:57644 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.37:57662 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     157.245.57.180:56912 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.196.79:56182 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.232:60176 - "GET / HTTP/1.1" 404 Not Found
+INFO:     54.37.30.157:41504 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.13:63022 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.199.113.61:43782 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.60:40856 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.60:45914 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.60:54978 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     137.184.100.139:36896 - "GET /tables HTTP/1.1" 404 Not Found
+INFO:     167.94.138.41:42548 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.41:51834 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.226:61262 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.6:61992 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.130:50427 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.205:64808 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:48942 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240511125038 HTTP/1.1" 404 Not Found
+INFO:     205.210.31.92:63136 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.199.105.59:43692 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.151:64754 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     142.93.104.190:29811 - "GET / HTTP/1.0" 404 Not Found
+INFO:     165.227.130.230:7946 - "GET /cgi-bin/authLogin.cgi HTTP/1.1" 404 Not Found
+INFO:     157.230.103.49:53258 - "GET /query?q=SHOW+DIAGNOSTICS HTTP/1.1" 404 Not Found
+INFO:     157.230.30.241:54352 - "GET /v2/_catalog HTTP/1.1" 404 Not Found
+INFO:     134.122.91.241:56492 - "GET / HTTP/1.1" 404 Not Found
+INFO:     134.122.91.241:56500 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     167.248.133.63:33974 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.63:39610 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     162.142.125.8:49546 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.8:49282 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     209.38.194.174:59940 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     173.255.205.79:45108 - "GET / HTTP/1.0" 404 Not Found
+INFO:     173.255.205.79:45118 - "OPTIONS / HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     173.255.205.79:49516 - "GET /nice%20ports%2C/Trinity.txt.bak HTTP/1.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.31:64180 - "GET / HTTP/1.1" 404 Not Found
+INFO:     104.248.169.28:46434 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+INFO:     198.235.24.165:61064 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     118.194.250.95:53218 - "GET / HTTP/1.1" 404 Not Found
+INFO:     118.194.250.95:53306 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     118.194.250.95:53570 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     118.194.250.95:53572 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     192.241.222.40:42514 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.52:44750 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.52:52194 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.52:57344 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.46:33636 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.46:41118 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.46:49344 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     54.71.2.229:37090 - "GET / HTTP/1.1" 404 Not Found
+INFO:     106.75.177.107:38962 - "POST /token HTTP/1.1" 404 Not Found
+INFO:     3.10.143.37:55762 - "GET /login.jsp HTTP/1.1" 404 Not Found
+INFO:     198.235.24.160:63348 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.138:60910 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.31:62276 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.31:64574 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.108:39157 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.236.59:49382 - "GET / HTTP/1.1" 404 Not Found
+INFO:     143.198.159.52:56840 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+INFO:     45.156.129.46:57190 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     170.64.214.114:58182 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+INFO:     170.64.131.228:39588 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+INFO:     134.209.25.209:36594 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     165.154.182.92:47750 - "GET / HTTP/1.1" 404 Not Found
+INFO:     165.154.182.92:47892 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     165.154.182.92:48064 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     165.154.182.92:48062 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:33390 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240514175856 HTTP/1.1" 404 Not Found
+INFO:     162.142.125.211:48118 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.211:36682 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     207.154.255.12:20206 - "GET /solr/admin/info/system HTTP/1.1" 404 Not Found
+INFO:     207.154.255.12:20222 - "GET /solr/admin/cores?action=STATUS&wt=json HTTP/1.1" 404 Not Found
+INFO:     209.38.210.127:59892 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+INFO:     46.101.16.223:41302 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+INFO:     143.198.151.173:46278 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+INFO:     205.210.31.5:57452 - "GET / HTTP/1.1" 404 Not Found
+INFO:     64.23.165.230:33700 - "GET http%3A//uplo.ad/?v=1&ip=3.34.221.67&port=9000 HTTP/1.1" 404 Not Found
+INFO:     198.235.24.84:59570 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.40:63984 - "GET / HTTP/1.1" 404 Not Found
+INFO:     178.128.220.18:34164 - "GET / HTTP/1.1" 404 Not Found
+INFO:     107.170.239.39:56114 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.41:43710 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.41:57408 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.41:38528 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.137:61062 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.58:40376 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.58:56926 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.58:56928 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.232:62260 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.180.143.138:42828 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     118.26.39.44:24018 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.149.26.240:48778 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.149.26.240:48780 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     45.156.128.37:52534 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.204.39:60786 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.231:45146 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.231:39234 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     198.235.24.56:60504 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.173:60934 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.157:59092 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.160:40127 - "GET / HTTP/1.1" 404 Not Found
+INFO:     193.118.53.58:43550 - "GET / HTTP/1.1" 404 Not Found
+INFO:     193.118.53.58:43566 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     68.183.223.125:53936 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.162:59520 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.118:45124 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.118:36192 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.155.28:38996 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.28:39008 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.28:39020 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.25:57656 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.194:58124 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.78:34634 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.78:34666 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.78:46776 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     188.166.96.20:59326 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.17:65464 - "GET / HTTP/1.1" 404 Not Found
+INFO:     107.170.237.54:37862 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:39008 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240519104419 HTTP/1.1" 404 Not Found
+INFO:     143.198.134.58:60824 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.116:60960 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.153:59772 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.168:63158 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.97:43949 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.199.83:48356 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.63:35030 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.63:60526 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.16:57522 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.59:35752 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.59:59634 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.59:46486 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.195:64882 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.192.66:51818 - "GET / HTTP/1.1" 404 Not Found
+INFO:     80.66.83.47:36618 - "CONNECT hotmail-com.olc.protection.outlook.com%3A25 HTTP/1.1" 404 Not Found
+INFO:     80.66.83.47:43440 - "CONNECT 80.66.83.47%3A80 HTTP/1.1" 404 Not Found
+INFO:     205.210.31.197:63266 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.48:58138 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.48:55210 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.48:55224 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.27:60890 - "GET / HTTP/1.1" 404 Not Found
+INFO:     107.170.243.32:58686 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.156.128.2:49156 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.156.128.2:56762 - "GET /api/session/properties HTTP/1.1" 404 Not Found
+INFO:     45.156.128.2:46172 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     205.210.31.145:62126 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.31:58620 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.32:60282 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.24:33558 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.24:41406 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.155.24:41420 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     45.33.109.10:56146 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.155.90.220:55258 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.222:49565 - "GET / HTTP/1.1" 404 Not Found
+INFO:     170.64.174.242:53016 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.233:44046 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.233:42726 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     198.235.24.160:59240 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.176:61006 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.6:64528 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.32:57986 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.180.143.80:59064 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.180.143.80:41242 - "GET /api/session/properties HTTP/1.1" 404 Not Found
+INFO:     185.180.143.80:59552 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     154.212.141.215:58440 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.23:60566 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.243.136.42:47886 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.202:62394 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:33020 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240525054632 HTTP/1.1" 404 Not Found
+INFO:     138.197.172.167:44960 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.214:41160 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.114:57740 - "GET / HTTP/1.1" 404 Not Found
+INFO:     44.220.188.72:34408 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.136:58670 - "GET / HTTP/1.1" 404 Not Found
+INFO:     34.212.170.50:36616 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.171:44345 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.25:34880 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.25:34778 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.25:34808 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     192.241.197.4:49184 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.168:59748 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.154:59112 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.113:42690 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.113:39130 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.113:55738 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     205.210.31.157:60140 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.233:58720 - "GET / HTTP/1.1" 404 Not Found
+INFO:     138.68.208.45:50970 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.156:57868 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:43186 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240528134013 HTTP/1.1" 404 Not Found
+INFO:     198.235.24.143:64024 - "GET / HTTP/1.1" 404 Not Found
+INFO:     143.198.211.90:58216 - "GET / HTTP/1.1" 404 Not Found
+INFO:     159.203.192.39:53256 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.25:64098 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.45:37222 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.45:58266 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.248.133.45:37564 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     87.236.176.27:39029 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.126:55800 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.126:52122 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     207.90.244.14:52206 - "GET / HTTP/1.1" 404 Not Found
+INFO:     207.90.244.5:56310 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.158:61740 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.145:57382 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.241.213.41:33250 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.200:55504 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.200:43120 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.200:43126 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     147.185.132.63:59694 - "GET / HTTP/1.1" 404 Not Found
+INFO:     80.82.77.33:36714 - "GET / HTTP/1.1" 404 Not Found
+INFO:     34.76.158.233:60536 - "GET / HTTP/1.1" 404 Not Found
+INFO:     34.77.99.191:35422 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.137:64186 - "GET / HTTP/1.1" 404 Not Found
+INFO:     192.155.88.231:56187 - "GET / HTTP/1.1" 404 Not Found
+INFO:     172.105.128.11:14350 - "GET / HTTP/1.1" 404 Not Found
+INFO:     43.133.129.213:18824 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.99.136.137:59865 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.99.136.136:49081 - "GET / HTTP/1.1" 404 Not Found
+INFO:     165.22.120.187:54052 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.10:58568 - "GET / HTTP/1.1" 404 Not Found
+INFO:     60.25.48.13:51855 - "GET / HTTP/1.1" 404 Not Found
+INFO:     27.115.124.109:12747 - "GET / HTTP/1.1" 404 Not Found
+INFO:     13.91.166.67:52384 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.79:60768 - "GET / HTTP/1.1" 404 Not Found
+INFO:     34.78.6.216:34586 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.146.130:51214 - "GET / HTTP/1.1" 404 Not Found
+INFO:     91.92.244.109:57026 - "CONNECT srv57c0d2365c3c.korsan.me%3A443 HTTP/1.1" 404 Not Found
+INFO:     87.236.176.157:44413 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.135:64492 - "GET / HTTP/1.1" 404 Not Found
+INFO:     154.212.141.172:41750 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.115:65012 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.61:33592 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.61:52260 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.61:52274 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     165.22.160.209:51870 - "GET / HTTP/1.1" 404 Not Found
+INFO:     34.78.85.104:50526 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.148.10.122:37286 - "GET / HTTP/1.1" 404 Not Found
+INFO:     20.118.68.219:34012 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.124:59910 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.2:64066 - "GET / HTTP/1.1" 404 Not Found
+INFO:     128.14.211.186:37860 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.16:47988 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.16:39070 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.16:39082 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     45.156.128.12:44498 - "GET /api/session/properties HTTP/1.1" 404 Not Found
+INFO:     45.156.128.12:58404 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.156.128.12:41190 - "GET /favicon-32x32.png HTTP/1.1" 404 Not Found
+INFO:     143.198.202.59:52556 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.34:60832 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.34:60368 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.34:36664 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     20.118.68.254:38300 - "GET / HTTP/1.1" 404 Not Found
+INFO:     152.32.226.8:34462 - "GET / HTTP/1.1" 404 Not Found
+INFO:     152.32.226.8:34552 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     152.32.226.8:34604 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     152.32.226.8:34602 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     43.129.57.32:45282 - "GET / HTTP/1.1" 404 Not Found
+INFO:     36.99.136.129:22183 - "GET / HTTP/1.1" 404 Not Found
+INFO:     23.145.40.147:36486 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.17:63814 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     101.36.106.134:42744 - "GET / HTTP/1.1" 404 Not Found
+INFO:     101.36.106.134:42842 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     101.36.106.134:42918 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     101.36.106.134:42920 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     71.6.134.233:42014 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.233:55684 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     198.235.24.248:62154 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:37126 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240604102034 HTTP/1.1" 404 Not Found
+INFO:     80.66.83.47:35286 - "CONNECT hotmail-com.olc.protection.outlook.com%3A25 HTTP/1.1" 404 Not Found
+INFO:     87.236.176.221:51321 - "GET / HTTP/1.1" 404 Not Found
+INFO:     80.66.83.47:49702 - "CONNECT 80.66.83.47%3A80 HTTP/1.1" 404 Not Found
+INFO:     87.236.176.196:43217 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.113:35998 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.113:49942 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.113:49958 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     206.217.128.98:47990 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.28:58316 - "GET / HTTP/1.1" 404 Not Found
+INFO:     80.66.83.47:58884 - "CONNECT hotmail-com.olc.protection.outlook.com%3A25 HTTP/1.1" 404 Not Found
+INFO:     106.75.36.29:54190 - "POST /token HTTP/1.1" 404 Not Found
+INFO:     80.66.83.47:56244 - "CONNECT 80.66.83.47%3A80 HTTP/1.1" 404 Not Found
+INFO:     198.235.24.252:64732 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.172:62164 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.83:62114 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.148.10.122:39070 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.53:58192 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.53:60494 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.53:50502 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     134.209.159.1:43834 - "GET / HTTP/1.1" 404 Not Found
+INFO:     172.168.41.9:53972 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.135:62818 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.100:52268 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.100:41038 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.100:41058 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     175.30.48.100:34110 - "GET / HTTP/1.1" 404 Not Found
+INFO:     122.96.28.237:28668 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.38:60648 - "GET / HTTP/1.1" 404 Not Found
+INFO:     45.155.91.226:35222 - "GET /%2BCSCOE%2B/logon.html HTTP/1.1" 404 Not Found
+INFO:     162.243.174.145:48886 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.5:62314 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.252:65320 - "GET / HTTP/1.1" 404 Not Found
+INFO:     103.203.57.26:50156 - "GET http%3A//clientapi.ipip.net/echo.php?info=20240607130737 HTTP/1.1" 404 Not Found
+INFO:     167.94.138.120:53462 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.120:53480 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.242:63970 - "GET / HTTP/1.1" 404 Not Found
+INFO:     87.236.176.121:46551 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.29:58220 - "GET / HTTP/1.1" 404 Not Found
+INFO:     64.226.73.92:46880 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.217.128.98:43442 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.195:63154 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.232:52948 - "GET / HTTP/1.1" 404 Not Found
+INFO:     71.6.134.232:42224 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     64.227.188.167:48992 - "GET / HTTP/1.1" 404 Not Found
+INFO:     52.53.154.207:47218 - "GET / HTTP/1.1" 404 Not Found
+INFO:     13.64.109.8:34996 - "GET / HTTP/1.1" 404 Not Found
+INFO:     147.185.132.150:59806 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.161:60720 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.219:50176 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.219:57916 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.219:57930 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     154.212.141.167:58402 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.189.133.219:59554 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.109:34724 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.109:46722 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.145.109:46726 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     198.235.24.130:64836 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.170:62100 - "GET / HTTP/1.1" 404 Not Found
+INFO:     185.180.143.143:45742 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.120:47520 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.120:39246 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.120:39262 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.27:48646 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.27:50942 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.27:50946 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     13.64.109.214:51702 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.57:46214 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.57:33224 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.146.57:35410 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     87.236.176.22:60987 - "GET / HTTP/1.1" 404 Not Found
+INFO:     147.185.132.141:57980 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.25:60736 - "GET / HTTP/1.1" 404 Not Found
+INFO:     159.65.81.142:44908 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.113:51720 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.113:36892 - "GET / HTTP/1.1" 404 Not Found
+INFO:     206.168.34.113:44238 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     147.185.132.186:64222 - "GET / HTTP/1.1" 404 Not Found
+INFO:     198.235.24.130:58208 - "GET / HTTP/1.1" 404 Not Found
+INFO:     172.206.143.253:56516 - "GET / HTTP/1.1" 404 Not Found
+INFO:     205.210.31.164:64468 - "GET / HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [26477]
+INFO:     Stopping reloader process [3439]
